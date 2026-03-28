@@ -1,0 +1,169 @@
+import React, { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+const Hero: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
+  return (
+    <section id="home" ref={ref} style={{ position: 'relative', height: '100vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      {/* Animated background blobs */}
+      <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 15, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+          style={{
+            position: 'absolute', right: '-10%', top: '-10%',
+            width: '70vw', height: '70vw', maxWidth: 900,
+            background: 'radial-gradient(ellipse, rgba(139,26,26,0.35) 0%, rgba(192,57,43,0.08) 50%, transparent 80%)',
+            borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
+          }}
+        />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], rotate: [0, -10, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          style={{
+            position: 'absolute', left: '-15%', bottom: '-10%',
+            width: '60vw', height: '60vw', maxWidth: 700,
+            background: 'radial-gradient(ellipse, rgba(139,26,26,0.2) 0%, transparent 70%)',
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+          }}
+        />
+        {/* Grid overlay */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'linear-gradient(rgba(192,57,43,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(192,57,43,0.04) 1px, transparent 1px)',
+          backgroundSize: '80px 80px',
+        }} />
+      </div>
+
+      <motion.div style={{ y, opacity, position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 24px' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 2.8 }}
+          style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 24 }}
+        >
+          ✦ The Signature of Modern Brands ✦
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 3.0, ease: 'easeOut' }}
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 'clamp(72px, 12vw, 160px)',
+            fontWeight: 300,
+            lineHeight: 0.9,
+            color: '#f5f0eb',
+            letterSpacing: '-0.02em',
+            marginBottom: 8,
+          }}
+        >
+          illiora
+        </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, scaleX: 0 }}
+          animate={{ opacity: 1, scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 3.3 }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 8 }}
+        >
+          <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, transparent, #c0392b)' }} />
+          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.5em', color: '#5a5550', textTransform: 'uppercase' }}>The Design Studio</span>
+          <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, #c0392b, transparent)' }} />
+        </motion.div>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 3.4 }}
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 'clamp(28px, 4vw, 52px)',
+            fontWeight: 300,
+            fontStyle: 'italic',
+            color: '#b0a89e',
+            letterSpacing: '0.04em',
+            marginBottom: 48,
+          }}
+        >
+          Graphic & Brand Designer
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 3.6 }}
+          style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}
+        >
+          <a
+            href="#works"
+            style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em',
+              textTransform: 'uppercase', color: '#f5f0eb', background: '#c0392b',
+              padding: '16px 40px', transition: 'all 0.3s', display: 'inline-block',
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = '#e74c3c'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = '#c0392b'; }}
+          >
+            View Works
+          </a>
+          <a
+            href="#contact"
+            style={{
+              fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em',
+              textTransform: 'uppercase', color: '#c0392b', border: '1px solid rgba(192,57,43,0.4)',
+              padding: '16px 40px', transition: 'all 0.3s', display: 'inline-block',
+            }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = '#c0392b'; (e.currentTarget as HTMLElement).style.color = '#f5f0eb'; (e.currentTarget as HTMLElement).style.background = 'rgba(192,57,43,0.1)'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(192,57,43,0.4)'; (e.currentTarget as HTMLElement).style.color = '#c0392b'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
+          >
+            Let's Talk
+          </a>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 4.2 }}
+          style={{ position: 'absolute', bottom: -120, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}
+        >
+          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.4em', color: '#5a5550', textTransform: 'uppercase' }}>Scroll</span>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity }}
+            style={{ width: 1, height: 48, background: 'linear-gradient(180deg, #c0392b, transparent)' }}
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Floating tags */}
+      {['Branding', 'Logo', 'Packaging', 'Print'].map((tag, i) => (
+        <motion.div
+          key={tag}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.3, y: [0, -8, 0] }}
+          transition={{ delay: 3.5 + i * 0.2, y: { duration: 3 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 } }}
+          style={{
+            position: 'absolute',
+            left: i % 2 === 0 ? `${8 + i * 3}%` : 'auto',
+            right: i % 2 !== 0 ? `${8 + i * 2}%` : 'auto',
+            top: `${25 + i * 12}%`,
+            fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.3em',
+            textTransform: 'uppercase', color: '#c0392b', border: '1px solid rgba(192,57,43,0.2)',
+            padding: '6px 14px',
+          }}
+        >
+          {tag}
+        </motion.div>
+      ))}
+    </section>
+  );
+};
+
+export default Hero;
