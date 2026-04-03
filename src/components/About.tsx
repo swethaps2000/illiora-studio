@@ -56,7 +56,7 @@ const About: React.FC = () => {
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             style={{
-              position: 'absolute', bottom: -20, right: -20, background: '#c0392b',
+              position: 'absolute', bottom: -20, right: -20, background: '#9c241c',
               padding: '20px 24px', textAlign: 'center',
             }}
           >
@@ -71,18 +71,18 @@ const About: React.FC = () => {
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 }}
         >
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
             ✦ About Me
           </div>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#f5f0eb', marginBottom: 24 }}>
+          <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 5vw, 62px)', fontWeight: 300, lineHeight: 1.1, color: '#f5f0eb', marginBottom: 24 }}>
             Crafting Identities<br />
-            <em style={{ fontStyle: 'italic', color: '#c0392b' }}>That Speak</em>
+            <em style={{ fontStyle: "'Poppins', sans-serif", color: '#c0392b' }}>That Speak</em>
           </h2>
           <div style={{ width: 48, height: 1, background: '#c0392b', marginBottom: 32 }} />
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: '#b0a89e', fontWeight: 300, marginBottom: 20 }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 14, lineHeight: 1.9, color: '#9c9c97', fontWeight: 300, marginBottom: 20 }}>
             I'm a passionate graphic designer with over 5 years of experience crafting distinctive brand identities for businesses worldwide. My work bridges the gap between strategy and aesthetics — creating visuals that don't just look beautiful, but communicate powerfully.
           </p>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.9, color: '#b0a89e', fontWeight: 300, marginBottom: 40 }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 14, lineHeight: 1.9, color: '#9c9c97', fontWeight: 300, marginBottom: 40 }}>
             From logo design to full packaging systems, I bring a meticulous attention to detail and a deep understanding of visual storytelling to every project. I believe every brand deserves a signature — a mark that's unmistakably theirs.
           </p>
 
@@ -96,8 +96,8 @@ const About: React.FC = () => {
                 transition={{ delay: 0.4 + i * 0.1 }}
                 style={{ borderLeft: '1px solid rgba(192,57,43,0.3)', paddingLeft: 16 }}
               >
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 36, fontWeight: 600, color: '#c0392b', lineHeight: 1 }}>{s.value}</div>
-                <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.15em', color: '#5a5550', textTransform: 'uppercase', marginTop: 4 }}>{s.label}</div>
+                <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 36, fontWeight: 600, color: '#c0392b', lineHeight: 1 }}>{s.value}</div>
+                <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.15em', color: '#5a5550', textTransform: 'uppercase', marginTop: 4 }}>{s.label}</div>
               </motion.div>
             ))}
           </div>

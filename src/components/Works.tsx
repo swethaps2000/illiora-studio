@@ -61,19 +61,19 @@ const WorkCard: React.FC<{ work: typeof works[0]; index: number; inView: boolean
             flexDirection: 'column', gap: 16,
           }}
         >
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase' }}>View Project</span>
+          <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase' }}>View Project</span>
           <div style={{ width: 40, height: 1, background: '#c0392b' }} />
-          <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, color: '#f5f0eb' }}>{work.title}</span>
+          <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 28, color: '#f5f0eb' }}>{work.title}</span>
         </motion.div>
       </div>
 
       {/* Info */}
       <div style={{ padding: '16px 0 8px', borderBottom: '1px solid rgba(192,57,43,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <div>
-          <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 20, color: '#f5f0eb', fontWeight: 400 }}>{work.title}</div>
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#5a5550', textTransform: 'uppercase', marginTop: 4 }}>{work.category} · {work.tag}</div>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 20, color: '#f5f0eb', fontWeight: 400 }}>{work.title}</div>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#5a5550', textTransform: 'uppercase', marginTop: 4 }}>{work.category} · {work.tag}</div>
         </div>
-        <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 16, color: 'rgba(192,57,43,0.4)' }}>{work.year}</span>
+        <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 16, color: 'rgba(192,57,43,0.4)' }}>{work.year}</span>
       </div>
 
       <style>{`.work-hov { transform: scale(1.06); }`}</style>
@@ -97,12 +97,12 @@ const Works: React.FC = () => {
           transition={{ duration: 0.8 }}
           style={{ marginBottom: 'clamp(40px, 6vw, 72px)' }}
         >
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
             ✦ Portfolio
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 40 }}>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
-              Selected <em style={{ fontStyle: 'italic', color: '#c0392b' }}>Works</em>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
+              Selected <em style={{ fontStyle: "'Poppins', sans-serif", color: '#c0392b' }}>Works</em>
             </h2>
           </div>
 
@@ -113,11 +113,11 @@ const Works: React.FC = () => {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.25em', textTransform: 'uppercase',
+                  fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.25em', textTransform: 'uppercase',
                   padding: '8px 18px', border: '1px solid',
                   borderColor: activeCategory === cat ? '#c0392b' : 'rgba(192,57,43,0.2)',
                   background: activeCategory === cat ? '#c0392b' : 'transparent',
-                  color: activeCategory === cat ? '#f5f0eb' : '#5a5550',
+                  color: activeCategory === cat ? '#f5f0eb' : '#9c9c97',
                   cursor: 'none', transition: 'all 0.3s',
                 }}
               >
@@ -155,7 +155,7 @@ const Works: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase',
+              fontFamily: "'Poppins', sans-serif", fontSize: 11, letterSpacing: '0.25em', textTransform: 'uppercase',
               color: '#c0392b', border: '1px solid rgba(192,57,43,0.4)', padding: '16px 48px',
               display: 'inline-block', transition: 'all 0.3s',
             }}
