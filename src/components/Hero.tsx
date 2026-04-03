@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import logo_white from '../assets/logo_white.png';
 
 const Hero: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,11 +33,11 @@ const Hero: React.FC = () => {
           }}
         />
         {/* Grid overlay */}
-        <div style={{
+        {/* <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: 'linear-gradient(rgba(192,57,43,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(192,57,43,0.04) 1px, transparent 1px)',
           backgroundSize: '80px 80px',
-        }} />
+        }} /> */}
       </div>
 
       <motion.div style={{ y, opacity, position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 24px' }}>
@@ -44,7 +45,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 2.8 }}
-          style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 24 }}
+          style={{ fontFamily: "'poppins', sans-serif", fontSize: 16, letterSpacing: '0.4em', color: '#9c241c', textTransform: 'uppercase', marginBottom: 24 }}
         >
           ✦ The Signature of Modern Brands ✦
         </motion.div>
@@ -54,16 +55,31 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 3.0, ease: 'easeOut' }}
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 'clamp(72px, 12vw, 160px)',
-            fontWeight: 300,
-            lineHeight: 0.9,
-            color: '#f5f0eb',
-            letterSpacing: '-0.02em',
-            marginBottom: 8,
+            // fontFamily: "'Cormorant Garamond', serif",
+            // fontSize: 'clamp(72px, 12vw, 160px)',
+            // fontWeight: 300,
+            // lineHeight: 0.9,
+            // color: '#f5f0eb',
+            // letterSpacing: '-0.02em',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginBottom: 0,
           }}
         >
-          illiora
+          {/* illiora */}
+          {/* {logo_white} */}
+          <img
+
+          src={logo_white}
+          alt="Illiora Logo"
+          style={{
+            width: 'clamp(250px, 80vw, 500px)',
+            height: 'auto',
+            display: 'block',
+
+          }}
+          ></img>
         </motion.h1>
 
         <motion.div
@@ -72,9 +88,9 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 3.3 }}
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, marginBottom: 8 }}
         >
-          <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, transparent, #c0392b)' }} />
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.5em', color: '#5a5550', textTransform: 'uppercase' }}>The Design Studio</span>
-          <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, #c0392b, transparent)' }} />
+          {/* <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, transparent, #c0392b)' }} /> */}
+          {/* <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.5em', color: '#f9f2ec', textTransform: 'uppercase' }}>The Design Studio</span> */}
+          {/* <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg, #c0392b, transparent)' }} /> */}
         </motion.div>
 
         <motion.h2
@@ -82,11 +98,12 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3.4 }}
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            // fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: 'clamp(28px, 4vw, 52px)',
             fontWeight: 300,
             fontStyle: 'italic',
-            color: '#b0a89e',
+            color: '#e0dcd7',
             letterSpacing: '0.04em',
             marginBottom: 48,
           }}
@@ -104,11 +121,11 @@ const Hero: React.FC = () => {
             href="#works"
             style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em',
-              textTransform: 'uppercase', color: '#f5f0eb', background: '#c0392b',
+              textTransform: 'uppercase', color: '#f5f0eb', background: '#9c241c',
               padding: '16px 40px', transition: 'all 0.3s', display: 'inline-block',
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = '#e74c3c'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = '#c0392b'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = '#9c241c'; }}
           >
             View Works
           </a>
@@ -116,7 +133,7 @@ const Hero: React.FC = () => {
             href="#contact"
             style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em',
-              textTransform: 'uppercase', color: '#c0392b', border: '1px solid rgba(192,57,43,0.4)',
+              textTransform: 'uppercase', color: '#c0392b', border: '1px solid #c0392b',
               padding: '16px 40px', transition: 'all 0.3s', display: 'inline-block',
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = '#c0392b'; (e.currentTarget as HTMLElement).style.color = '#f5f0eb'; (e.currentTarget as HTMLElement).style.background = 'rgba(192,57,43,0.1)'; }}
@@ -133,7 +150,7 @@ const Hero: React.FC = () => {
           transition={{ delay: 4.2 }}
           style={{ position: 'absolute', bottom: -120, left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}
         >
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.4em', color: '#5a5550', textTransform: 'uppercase' }}>Scroll</span>
+          <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 12, letterSpacing: '0.4em', color: '#9c9c97', textTransform: 'uppercase' }}>Scroll</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.8, repeat: Infinity }}

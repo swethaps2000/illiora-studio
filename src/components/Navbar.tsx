@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+// import logo_white from '../assets/logo_white.png';
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
@@ -37,8 +37,8 @@ const Navbar: React.FC = () => {
         }}
       >
         {/* Logo */}
-        <a href="#home" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 600, letterSpacing: '0.12em', color: '#f5f0eb' }}>
-          illiora<span style={{ color: '#c0392b', fontSize: 8, verticalAlign: 'super', letterSpacing: '0.3em', fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}>STUDIO</span>
+        <a href="#home" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 600, letterSpacing: '0.12em', color: '#ffffff' }}>
+          illiora<span style={{ color: '#af6058', fontSize: 8, verticalAlign: 'super', letterSpacing: '0.3em', fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}>STUDIO</span>
         </a>
 
         {/* Desktop Nav */}
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 href={item.href}
                 style={{
                   fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.2em',
-                  textTransform: 'uppercase', color: '#b0a89e', transition: 'color 0.3s',
+                  textTransform: 'uppercase', color: '#ffffff', transition: 'color 0.3s',
                   position: 'relative',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#c0392b')}
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
               href="#contact"
               style={{
                 fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.2em',
-                textTransform: 'uppercase', color: '#f5f0eb', background: '#c0392b',
+                textTransform: 'uppercase', color: '#f5f0eb', background: '#9c241c',
                 padding: '10px 24px', transition: 'all 0.3s',
               }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = '#e74c3c'; }}
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
                 onClick={() => setMenuOpen(false)}
                 style={{
                   fontFamily: "'Cormorant Garamond', serif", fontSize: 44, fontWeight: 300,
-                  letterSpacing: '0.08em', color: '#f5f0eb',
+                  letterSpacing: '0.08em', color: '#ffffff',
                 }}
               >
                 {item.label}

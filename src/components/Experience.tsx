@@ -53,10 +53,10 @@ const Experience: React.FC = () => {
           transition={{ duration: 0.8 }}
           style={{ marginBottom: 'clamp(48px, 8vw, 96px)', textAlign: 'center' }}
         >
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
             ✦ My Journey
           </div>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
+          <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
             Experience &amp; <em style={{ fontStyle: 'italic', color: '#c0392b' }}>Skills</em>
           </h2>
         </motion.div>
@@ -68,7 +68,7 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
-              style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#5a5550', textTransform: 'uppercase', marginBottom: 40 }}
+              style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#9c9c97', textTransform: 'uppercase', marginBottom: 40 }}
             >
               Work History
             </motion.h3>
@@ -91,15 +91,15 @@ const Experience: React.FC = () => {
                     boxShadow: '0 0 0 3px rgba(192,57,43,0.15)',
                   }} />
 
-                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 8 }}>
+                  <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 8 }}>
                     {exp.year} · {exp.type}
                   </div>
-                  <h4 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 24, fontWeight: 400, color: '#f5f0eb', marginBottom: 4 }}>{exp.role}</h4>
-                  <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: '#b0a89e', marginBottom: 10 }}>{exp.company}</div>
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.8, color: '#5a5550', marginBottom: 12 }}>{exp.desc}</p>
+                  <h4 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 24, fontWeight: 400, color: '#f5f0eb', marginBottom: 4 }}>{exp.role}</h4>
+                  <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, color: '#9c9c97', marginBottom: 10 }}>{exp.company}</div>
+                  <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 12, lineHeight: 1.8, color: '#9c9c97', marginBottom: 12 }}>{exp.desc}</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {exp.skills.map(sk => (
-                      <span key={sk} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.15em', color: '#b0a89e', border: '1px solid rgba(192,57,43,0.2)', padding: '3px 10px', textTransform: 'uppercase' }}>{sk}</span>
+                      <span key={sk} style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.15em', color: '#9c9c97', border: '1px solid rgba(192,57,43,0.2)', padding: '3px 10px', textTransform: 'uppercase' }}>{sk}</span>
                     ))}
                   </div>
                 </motion.div>
@@ -113,7 +113,7 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
-              style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#5a5550', textTransform: 'uppercase', marginBottom: 40 }}
+              style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#5a5550', textTransform: 'uppercase', marginBottom: 40 }}
             >
               Core Skills
             </motion.h3>
@@ -126,8 +126,8 @@ const Experience: React.FC = () => {
                   transition={{ duration: 0.7, delay: 0.3 + i * 0.1 }}
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.1em', color: '#b0a89e' }}>{skill.name}</span>
-                    <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, color: '#c0392b' }}>{skill.level}%</span>
+                    <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 11, letterSpacing: '0.1em', color: '#9c9c97' }}>{skill.name}</span>
+                    <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 18, color: '#c0392b' }}>{skill.level}%</span>
                   </div>
                   <div style={{ height: 1, background: 'rgba(255,255,255,0.06)', position: 'relative' }}>
                     <motion.div
@@ -148,10 +148,10 @@ const Experience: React.FC = () => {
               transition={{ delay: 1 }}
               style={{ marginTop: 48, padding: 28, border: '1px solid rgba(192,57,43,0.15)', background: 'rgba(192,57,43,0.03)' }}
             >
-              <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.3em', color: '#5a5550', textTransform: 'uppercase', marginBottom: 16 }}>Tools & Software</div>
+              <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.3em', color: '#9c9c97', textTransform: 'uppercase', marginBottom: 16 }}>Tools & Software</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                 {['Illustrator', 'Photoshop', 'InDesign', 'Figma', 'Canva', 'CorelDRAW'].map(tool => (
-                  <span key={tool} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: '#b0a89e', padding: '8px 16px', border: '1px solid rgba(192,57,43,0.2)', letterSpacing: '0.05em' }}>{tool}</span>
+                  <span key={tool} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: '#9c9c97', padding: '8px 16px', border: '1px solid rgba(192,57,43,0.2)', letterSpacing: '0.05em' }}>{tool}</span>
                 ))}
               </div>
             </motion.div>

@@ -57,14 +57,14 @@ const Services: React.FC = () => {
           transition={{ duration: 0.8 }}
           style={{ marginBottom: 'clamp(48px, 8vw, 96px)' }}
         >
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
             ✦ What I Do
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
+            <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
               Design<br /><em style={{ fontStyle: 'italic', color: '#c0392b' }}>Services</em>
             </h2>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 13, lineHeight: 1.8, color: '#5a5550', maxWidth: 320 }}>
+            <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: 13, lineHeight: 1.8, color: '#9c9c97', maxWidth: 320 }}>
               Full-spectrum graphic design services tailored for brands that mean business.
             </p>
           </div>
@@ -94,10 +94,10 @@ const Services: React.FC = () => {
                 paddingLeft: hovered === i ? 20 : 0,
               }}
             >
-              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, color: 'rgba(192,57,43,0.4)', fontWeight: 300 }}>{s.num}</span>
+              <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 18, color: 'rgba(192,57,43,0.4)', fontWeight: 300 }}>{s.num}</span>
               <div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: 16, marginBottom: 6, flexWrap: 'wrap' }}>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 400, color: hovered === i ? '#f5f0eb' : '#d0c8c0', transition: 'color 0.3s', letterSpacing: '0.02em' }}>
+                  <h3 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 400, color: hovered === i ? '#f5f0eb' : '#d0c8c0', transition: 'color 0.3s', letterSpacing: '0.02em' }}>
                     {s.title}
                   </h3>
                   <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 10, letterSpacing: '0.2em', color: '#c0392b', textTransform: 'uppercase' }}>{s.subtitle}</span>
@@ -108,7 +108,7 @@ const Services: React.FC = () => {
                   transition={{ duration: 0.3 }}
                   style={{ overflow: 'hidden' }}
                 >
-                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 12, lineHeight: 1.8, color: '#5a5550', marginBottom: 12, paddingTop: 4 }}>{s.desc}</p>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 14, lineHeight: 1.8, color: '#9c9c97', marginBottom: 12, paddingTop: 4 }}>{s.desc}</p>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     {s.tags.map(tag => (
                       <span key={tag} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#c0392b', border: '1px solid rgba(192,57,43,0.3)', padding: '4px 10px', textTransform: 'uppercase' }}>{tag}</span>
