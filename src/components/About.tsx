@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import me1 from '../assets/me/images_1.jpg';
 
 const stats = [
   { value: '5+', label: 'Years Experience' },
@@ -34,7 +35,7 @@ const About: React.FC = () => {
           }}>
             {/* Abstract design representing the designer */}
             <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg viewBox="0 0 400 480" style={{ width: '80%', height: '80%' }}>
+              {/* <svg viewBox="0 0 400 480" style={{ width: '80%', height: '80%' }}>
                 <defs>
                   <radialGradient id="rg1" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stopColor="#c0392b" stopOpacity="0.6" />
@@ -48,21 +49,33 @@ const About: React.FC = () => {
                 <circle cx="200" cy="240" r="120" fill="none" stroke="rgba(192,57,43,0.1)" strokeWidth="1" />
                 <text x="200" y="230" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="48" fill="#f5f0eb" opacity="0.9">i</text>
                 <text x="200" y="275" textAnchor="middle" fontFamily="'Montserrat', sans-serif" fontSize="10" fill="#c0392b" letterSpacing="6" opacity="0.8">ILLIORA</text>
-              </svg>
+              </svg> */}
+              <img
+  src={me1}
+  alt="About Me"
+  style={{
+    position: 'absolute',
+    inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  }}
+/>
             </div>
           </div>
           {/* Floating badge */}
-          <motion.div
+          {/* <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             style={{
               position: 'absolute', bottom: -20, right: -20, background: '#9c241c',
-              padding: '20px 24px', textAlign: 'center',
+              padding: '20px 4px', textAlign: 'center',
             }}
           >
-            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 40, fontWeight: 600, color: '#f5f0eb', lineHeight: 1 }}>5+</div>
+            <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 40, fontWeight: 600, color: '#f5f0eb', lineHeight: 1}}>5+</div>
+        
             <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: 'rgba(245,240,235,0.7)', textTransform: 'uppercase' }}>Years</div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Right: Text */}

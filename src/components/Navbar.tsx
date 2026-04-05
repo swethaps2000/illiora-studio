@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import logo_white from '../assets/logo_white.png';
+import logo_red from '../assets/logo_red_and_white.png';
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
@@ -37,9 +37,20 @@ const Navbar: React.FC = () => {
         }}
       >
         {/* Logo */}
-        <a href="#home" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 600, letterSpacing: '0.12em', color: '#ffffff' }}>
+        {/* <a href="#home" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 600, letterSpacing: '0.12em', color: '#ffffff' }}>
           illiora<span style={{ color: '#af6058', fontSize: 8, verticalAlign: 'super', letterSpacing: '0.3em', fontFamily: "'Montserrat', sans-serif", fontWeight: 300 }}>STUDIO</span>
-        </a>
+        </a> */}
+        <a href="#home" style={{ display: 'flex', alignItems: 'center' }}>
+  <img
+    src={logo_red}
+    alt="Illiora Studio Logo"
+    style={{
+      height: 50,   // adjust this based on your design
+      width: 'auto',
+      objectFit: 'contain',
+    }}
+  />
+</a>
 
         {/* Desktop Nav */}
         <ul style={{ display: 'flex', gap: 40, listStyle: 'none', alignItems: 'center' }} className="desktop-nav">

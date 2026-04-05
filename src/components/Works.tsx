@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
+import work1 from '../assets/works/work1.jpeg';
 
 const categories = ['All', 'Logo', 'Packaging', 'Flyer', 'Brochure', 'Menu', 'Banner', 'Visiting Card'];
 
 const works = [
-  { id: 1, title: 'Noir Coffee Co.', category: 'Logo', tag: 'Brand Identity', year: '2024', colors: ['#1a1a1a', '#c9a96e', '#f5f0eb'] },
-  { id: 2, title: 'Velvet Box', category: 'Packaging', tag: 'Luxury Packaging', year: '2024', colors: ['#2d1b1b', '#c0392b', '#f5e6d3'] },
-  { id: 3, title: 'Ember Events', category: 'Flyer', tag: 'Event Promo', year: '2024', colors: ['#0d0d0d', '#e74c3c', '#ffffff'] },
-  { id: 4, title: 'Aurum Finance', category: 'Brochure', tag: 'Corporate', year: '2023', colors: ['#111111', '#c9a96e', '#f5f0eb'] },
-  { id: 5, title: 'The Spice Trail', category: 'Menu', tag: 'Restaurant Brand', year: '2023', colors: ['#1a0f0f', '#c0392b', '#f5deb3'] },
-  { id: 6, title: 'Luxe Interiors', category: 'Banner', tag: 'Social Media', year: '2023', colors: ['#0a0a0a', '#b0a89e', '#ffffff'] },
-  { id: 7, title: 'Studio Muse', category: 'Visiting Card', tag: 'Creative Agency', year: '2024', colors: ['#0d0d0d', '#c0392b', '#f5f0eb'] },
-  { id: 8, title: 'Petal & Pine', category: 'Logo', tag: 'Floral Brand', year: '2023', colors: ['#1a1a1a', '#c9a96e', '#e8ddd0'] },
-  { id: 9, title: 'Dark Matter', category: 'Packaging', tag: 'Coffee Brand', year: '2024', colors: ['#080808', '#c0392b', '#f5f0eb'] },
+  { id: 1, title: 'Noir Coffee Co.', category: 'Logo', tag: 'Brand Identity', year: '2024', colors: ['#1a1a1a', '#c9a96e', '#f5f0eb'] , image: work1},
+  { id: 2, title: 'Velvet Box', category: 'Packaging', tag: 'Luxury Packaging', year: '2024', colors: ['#2d1b1b', '#c0392b', '#f5e6d3'] , image: work1},
+  { id: 3, title: 'Ember Events', category: 'Flyer', tag: 'Event Promo', year: '2024', colors: ['#0d0d0d', '#e74c3c', '#ffffff'] , image: work1},
+  { id: 4, title: 'Aurum Finance', category: 'Brochure', tag: 'Corporate', year: '2023', colors: ['#111111', '#c9a96e', '#f5f0eb'] , image: work1},
+  { id: 5, title: 'The Spice Trail', category: 'Menu', tag: 'Restaurant Brand', year: '2023', colors: ['#1a0f0f', '#c0392b', '#f5deb3'] , image: work1},
+  { id: 6, title: 'Luxe Interiors', category: 'Banner', tag: 'Social Media', year: '2023', colors: ['#0a0a0a', '#b0a89e', '#ffffff'] , image: work1},
+  { id: 7, title: 'Studio Muse', category: 'Visiting Card', tag: 'Creative Agency', year: '2024', colors: ['#0d0d0d', '#c0392b', '#f5f0eb'] , image: work1},
+  { id: 8, title: 'Petal & Pine', category: 'Logo', tag: 'Floral Brand', year: '2023', colors: ['#1a1a1a', '#c9a96e', '#e8ddd0'] , image: work1},
+  { id: 9, title: 'Dark Matter', category: 'Packaging', tag: 'Coffee Brand', year: '2024', colors: ['#080808', '#c0392b', '#f5f0eb'] , image: work1},
 ];
 
 const WorkCard: React.FC<{ work: typeof works[0]; index: number; inView: boolean }> = ({ work, index, inView }) => {
@@ -31,7 +32,7 @@ const WorkCard: React.FC<{ work: typeof works[0]; index: number; inView: boolean
       {/* Artwork */}
       <div style={{ position: 'relative', paddingBottom: '110%', overflow: 'hidden', background: '#111' }}>
         {/* Generated artwork using work's colors */}
-        <svg
+        {/* <svg
           viewBox="0 0 400 440"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', transition: 'transform 0.6s ease' }}
           className={hov ? 'work-hov' : ''}
@@ -49,8 +50,20 @@ const WorkCard: React.FC<{ work: typeof works[0]; index: number; inView: boolean
           <circle cx="200" cy="200" r="80" fill="none" stroke={work.colors[1]} strokeWidth="0.5" opacity="0.3" />
           <text x="200" y="195" textAnchor="middle" fontFamily="'Cormorant Garamond', serif" fontSize="22" fill={work.colors[2]} opacity="0.9" letterSpacing="2">{work.title}</text>
           <text x="200" y="220" textAnchor="middle" fontFamily="'Montserrat', sans-serif" fontSize="7" fill={work.colors[1]} opacity="0.8" letterSpacing="4">{work.tag.toUpperCase()}</text>
-        </svg>
-
+        </svg> */}
+        <img
+          src={work.image}
+          alt={work.title}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transition: 'transform 0.6s ease',
+          }}
+          className={hov ? 'work-hov' : ''}
+        />
         {/* Hover overlay */}
         <motion.div
           animate={{ opacity: hov ? 1 : 0 }}
@@ -71,7 +84,7 @@ const WorkCard: React.FC<{ work: typeof works[0]; index: number; inView: boolean
       <div style={{ padding: '16px 0 8px', borderBottom: '1px solid rgba(192,57,43,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
         <div>
           <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 20, color: '#f5f0eb', fontWeight: 400 }}>{work.title}</div>
-          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#5a5550', textTransform: 'uppercase', marginTop: 4 }}>{work.category} · {work.tag}</div>
+          <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 9, letterSpacing: '0.2em', color: '#9c9c97', textTransform: 'uppercase', marginTop: 4 }}>{work.category} · {work.tag}</div>
         </div>
         <span style={{ fontFamily: "'Poppins', sans-serif", fontSize: 16, color: 'rgba(192,57,43,0.4)' }}>{work.year}</span>
       </div>
