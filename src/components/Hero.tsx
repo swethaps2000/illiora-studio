@@ -98,8 +98,8 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 3.4 }}
           style={{
-            // fontFamily: "'Cormorant Garamond', serif",
-            fontFamily: "'Poppins', sans-serif",
+            fontFamily: "'Cormorant Garamond', serif",
+            // fontFamily: "'Poppins', sans-serif",
             fontSize: 'clamp(28px, 4vw, 52px)',
             fontWeight: 300,
             fontStyle: 'italic',
@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
             href="#contact"
             style={{
               fontFamily: "'Montserrat', sans-serif", fontSize: 11, letterSpacing: '0.25em',
-              textTransform: 'uppercase', color: '#c0392b', border: '1px solid #c0392b',
+              textTransform: 'uppercase', color: '#e86657', border: '1px solid #c0392b',
               padding: '16px 40px', transition: 'all 0.3s', display: 'inline-block',
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = '#c0392b'; (e.currentTarget as HTMLElement).style.color = '#f5f0eb'; (e.currentTarget as HTMLElement).style.background = 'rgba(192,57,43,0.1)'; }}

@@ -113,7 +113,7 @@ const Experience: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.2 }}
-              style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#5a5550', textTransform: 'uppercase', marginBottom: 40 }}
+              style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.3em', color: '#9c9c97', textTransform: 'uppercase', marginBottom: 40 }}
             >
               Core Skills
             </motion.h3>
@@ -148,10 +148,10 @@ const Experience: React.FC = () => {
               transition={{ delay: 1 }}
               style={{ marginTop: 48, padding: 28, border: '1px solid rgba(192,57,43,0.15)', background: 'rgba(192,57,43,0.03)' }}
             >
-              <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.3em', color: '#9c9c97', textTransform: 'uppercase', marginBottom: 16 }}>Tools & Software</div>
+              <div style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 9, letterSpacing: '0.3em', color: '#f4f1f1', textTransform: 'uppercase', marginBottom: 16 }}>Tools & Software</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
                 {['Illustrator', 'Photoshop', 'InDesign', 'Figma', 'Canva', 'CorelDRAW'].map(tool => (
-                  <span key={tool} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: '#9c9c97', padding: '8px 16px', border: '1px solid rgba(192,57,43,0.2)', letterSpacing: '0.05em' }}>{tool}</span>
+                  <span key={tool} style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: '#f4f1f1', padding: '8px 16px', border: '1px solid rgba(192,57,43,0.2)', letterSpacing: '0.05em' }}>{tool}</span>
                 ))}
               </div>
             </motion.div>
