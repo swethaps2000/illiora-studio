@@ -4,39 +4,26 @@ import { useInView } from '../hooks/useInView';
 
 const services = [
   {
-    num: '01', title: 'Logo Design', subtitle: 'Brand Identity',
-    desc: 'Crafting iconic marks that become the face of your brand. Every logo is a distillation of your brand\'s essence — memorable, versatile, and timeless.',
-    tags: ['Brand Marks', 'Wordmarks', 'Emblems', 'Icon Sets'],
+    num: '01', title: 'Brand identity', subtitle: '',
+    // desc: 'Crafting iconic marks that become the face of your brand. Every logo is a distillation of your brand\'s essence — memorable, versatile, and timeless.',
+    desc:'Building strong, cohesive visual identities that define how your brand is seen and remembered.',
+    tags: ['Logo design', 'visual systems', 'brand guidelines'],
+    // tags: ['Brand Marks', 'Wordmarks', 'Emblems', 'Icon Sets'],
   },
   {
-    num: '02', title: 'Package Design', subtitle: 'Product Experience',
-    desc: 'Transforming packaging into a brand touchpoint. From structural design to surface graphics, we create packaging that sells on the shelf.',
-    tags: ['Box Design', 'Label Design', 'Wrap Design', '3D Mockups'],
+    num: '02', title: 'Package Design', subtitle: '',
+    desc: 'Creating packaging that not only looks premium but enhances product perception and shelf impact.',
+    tags: ['Product packaging', 'Label design', 'Mockups'],
   },
   {
-    num: '03', title: 'Flyer Design', subtitle: 'Promotional Print',
-    desc: 'Eye-catching flyers that communicate your message with impact. Designed to stop, engage, and convert.',
-    tags: ['Event Flyers', 'Promotional', 'Digital Flyers', 'A4 / A5'],
+    num: '03', title: 'Marketing & Visual Design', subtitle: '',
+    desc: 'Designing impactful visuals that communicate clearly across campaigns and platforms.',
+    tags: ['Posters', 'Banners', 'Social Media creatives'],
   },
   {
-    num: '04', title: 'Brochure Design', subtitle: 'Corporate Print',
-    desc: 'Multi-page brochures that tell your brand story beautifully. From trifold to multi-page catalogs, we design with purpose.',
-    tags: ['Trifold', 'Bifold', 'Catalog', 'Corporate Profile'],
-  },
-  {
-    num: '05', title: 'Menu Card Design', subtitle: 'F&B Industry',
-    desc: 'Menus that elevate the dining experience. Whether for fine dining or casual eateries, your menu is a brand statement.',
-    tags: ['Restaurant', 'Café', 'Digital Menu', 'QR Menu'],
-  },
-  {
-    num: '06', title: 'Banner Design', subtitle: 'Visual Display',
-    desc: 'Bold banners that command attention. From digital to print, we design banners that make your brand impossible to ignore.',
-    tags: ['Social Media', 'Outdoor', 'Roll-up', 'Web Banners'],
-  },
-  {
-    num: '07', title: 'Visiting Card Design', subtitle: 'First Impressions',
-    desc: 'Business cards that leave a lasting impression. Your card is often the first physical touchpoint — make it count.',
-    tags: ['Standard Cards', 'Luxury Cards', 'Square Format', 'Digital Cards'],
+    num: '04', title: 'Print & Collateral', subtitle: '',
+    desc: 'Professionally crafted print materials that strengthen brand consistency across touchpoints.',
+    tags: ['Brochures', 'Flayers', 'Business cards', 'Menus'],
   },
 ];
 
@@ -58,7 +45,7 @@ const Services: React.FC = () => {
           style={{ marginBottom: 'clamp(48px, 8vw, 96px)' }}
         >
           <div style={{ fontFamily: "'Poppins', sans-serif", fontSize: 10, letterSpacing: '0.4em', color: '#c0392b', textTransform: 'uppercase', marginBottom: 20 }}>
-            ✦ What I Do
+            ✦ What we Do
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
             <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
