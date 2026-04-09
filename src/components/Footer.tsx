@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo_red from "../assets/logo_red_and_white.png";
+import logo_red from "../assets/logo_white.png";
 
 const Footer: React.FC = () => {
   return (
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
               letterSpacing: "0.1em",
             }}
           >
-            Available for projects · 670604
+            Available for projects
           </p>
         </div>
       </div>

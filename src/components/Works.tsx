@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import work1 from '../assets/works/work1.jpeg';
 
-const categories = ['All', 'Logo', 'Packaging', 'Flyer', 'Brochure', 'Menu', 'Banner', 'Visiting Card'];
+const categories = ['All', 'Logo', 'Packaging', 'Flyer', 'Brochure', 'Menu', 'Banner', 'Visiting Card', 'Poster'];
 
 const works = [
   { id: 1, title: 'Noir Coffee Co.', category: 'Logo', tag: 'Brand Identity', year: '2024', colors: ['#1a1a1a', '#c9a96e', '#f5f0eb'] , image: work1},
@@ -115,7 +115,7 @@ const Works: React.FC = () => {
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 40 }}>
             <h2 style={{ fontFamily: "'Poppins', sans-serif", fontSize: 'clamp(36px, 6vw, 80px)', fontWeight: 300, lineHeight: 1, color: '#f5f0eb' }}>
-              Selected <em style={{ fontStyle: "'Poppins', sans-serif", color: '#c0392b' }}>Works</em>
+              Design <em style={{ fontStyle: "'Poppins', sans-serif", color: '#c0392b' }}>Portfolio</em>
             </h2>
           </div>
 

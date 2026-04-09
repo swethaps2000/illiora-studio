@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import logo_white from '../assets/logo_white.png';
+// import logo_white from '../assets/logo_white.png';
+import logo_red from '../assets/logo_red_and_white.png';
 
 const Hero: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,14 +42,14 @@ const Hero: React.FC = () => {
       </div>
 
       <motion.div style={{ y, opacity, position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 24px' }}>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 2.8 }}
           style={{ fontFamily: "'poppins', sans-serif", fontSize: 16, letterSpacing: '0.4em', color: '#9c241c', textTransform: 'uppercase', marginBottom: 24 }}
         >
           ✦ The Signature of Modern Brands ✦
-        </motion.div>
+        </motion.div> */}
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -71,10 +72,10 @@ const Hero: React.FC = () => {
           {/* {logo_white} */}
           <img
 
-          src={logo_white}
+          src={logo_red}
           alt="Illiora Logo"
           style={{
-            width: 'clamp(250px, 80vw, 500px)',
+            width: 'clamp(250px, 30vw, 500px)',
             height: 'auto',
             display: 'block',
 
@@ -100,7 +101,7 @@ const Hero: React.FC = () => {
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             // fontFamily: "'Poppins', sans-serif",
-            fontSize: 'clamp(28px, 4vw, 52px)',
+            fontSize: 'clamp(28px, 24vw, 5px)',
             fontWeight: 300,
             fontStyle: 'italic',
             color: '#e0dcd7',
@@ -108,7 +109,7 @@ const Hero: React.FC = () => {
             marginBottom: 48,
           }}
         >
-          Graphic & Brand Designer
+          The Signature of Modern Brands 
         </motion.h2>
 
         <motion.div
